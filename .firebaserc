@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "empleados-d0eab": {
+      "hosting": {
+        "jointjsV1": [
+          "empleados-d0eab"
+        ]
+      }
+    }
+  }
+}
