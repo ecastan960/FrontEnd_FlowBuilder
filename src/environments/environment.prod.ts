@@ -5,7 +5,7 @@ export const environment = {
     authDomain: "empleados-d0eab.firebaseapp.com",
     projectId: "empleados-d0eab",
     storageBucket: "empleados-d0eab.appspot.com",
-    messagingSenderId: "487538213772",
+    messagingSenderId: "",
     appId: ""
   }
 };
