@@ -10,7 +10,7 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
 import { PaperComponent } from './pages/paper/paper.component';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = []; 
@@ -26,7 +26,8 @@ const routes: Routes = [];
   imports: [
     CommonModule,
     FrontendRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class FrontendModule { }

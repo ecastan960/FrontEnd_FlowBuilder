@@ -11,7 +11,7 @@ interface Question {
 }
 
 interface Answers {
-    frase?: string;
+    phrase?: string;
     target?: string;
 }
 
