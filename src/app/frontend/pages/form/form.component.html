@@ -1,57 +1,30 @@
-<h2>Editar Elemento</h2>
+<h2>Edit Page</h2>
 <hr>
-
-<!-- <form #editForm="ngForm">
-    <div class="form-group mb-3">
-      <label  class="form-label">Pregunta</label>
-      <input type="text" 
-      class="form-control"
-      
-      [(ngModel)]="message"
-      name="id"
-      >
-    </div>
-    <div class="form-group mb-3">
-      <label class="form-label">Respuestas</label>
-      <button class="btn btn-outline-primary mt-4 " (click)="agregarSalidas()">+</button>
-      <button class="btn btn-outline-primary mt-4 " (click)="eliminarSalidas()">-</button>      
-
-      <input type="text" 
-      class="form-control"
-       *ngFor="let output of outputs; let i = index"
-        [(ngModel)]="outputs"
-        name="{{i}}"
-        >
-    </div>
-    <button class="btn btn-outline-primary mt-4 " (click)="actualizar()">Actualizar</button>
-  </form> -->
-  <!-- <div *ngIf="this._cell.pageActive?test():false" ></div>
-  <div (dblclick)="onRightClick()"></div> -->
     
-    <form [formGroup]="currentData"  *ngIf="this._cell.pageActive"  >
+<form [formGroup]="currentData"  *ngIf="this._cell.pageActive"  >
+
+  <div class="form-group" >
+      <label class="form-label">Question/Message</label>
+      <input formControlName="message" type="text" class="form-control">
+  </div>
+  <div class="form-group" >
+    <label>Answers</label>
+    <button type="button" class="btn btn-secondary btn-sm m-2"
+    (click)="addAnswer()">Add</button>
+    <button type="button" class="btn btn-danger btn-sm m-2"
+    (click)="removeAnswer()">Remove</button>
     
-      <div class="form-group" >
-          <label class="form-label">Question/Message</label>
-          <input formControlName="message" type="text" class="form-control">
+    <div *ngIf="updateAnswer">
+      <div
+      formArrayName="answers" 
+      *ngFor="let answer of answers.controls; let i = index" >
+          <input type="text" class="form-control my-1" [formControlName]="i" >
       </div>
-      <div class="form-group" >
-        <label>Answers</label>
-        <button type="button" class="btn btn-secondary btn-sm m-2"
-        (click)="addAnswer()">Add</button>
-        <button type="button" class="btn btn-danger btn-sm m-2"
-        (click)="removeAnswer()">Remove</button>
-        
-        <div *ngIf="updateAnswer">
-          <div
-          formArrayName="answers" 
-          *ngFor="let answer of answers.controls; let i = index" >
-              <input type="text" class="form-control my-1" [formControlName]="i" >
-          </div>
-      </div>
-    </div>
-  
-      <button class="btn btn-primary mt-4" type="submit" (click)="update()" > Update </button>
-  </form>
+  </div>
+</div>
+
+  <button class="btn btn-primary mt-4" type="submit" (click)="update()" > Update </button>
+</form>
 
   
 

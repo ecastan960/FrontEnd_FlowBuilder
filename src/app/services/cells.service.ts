@@ -64,7 +64,7 @@ export class CellsService {
         
 
         paper.on('blank:mousewheel', function(evt:any, x:any, y:any, delta:any) { 
-            if (delta < 0) {
+            if (delta < 0 && escala > 0.7) {
                 escala -= 0.1
                 paper.scale(`${escala}`);
             } else {

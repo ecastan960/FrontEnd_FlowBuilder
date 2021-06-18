@@ -7,6 +7,7 @@ import { CellsService } from 'src/app/services/cells.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  cell: any[] = []
 
 
 
@@ -40,5 +41,22 @@ export class SidebarComponent implements OnInit {
   guardarProyecto(){
     this._cell.guardarProyecto();
   }
+
+  LoadPage(){
+    this._cell.getCelula().subscribe(data => {
+      this.cell = [];
+      data.forEach((element:any) => {
+        this.cell.push({
+          id: element.payload.doc.id,
+          ...element.payload.doc.data(),
+        })
+      } );
+      const size = this.cell[0]['cells'].length;
+
+      for (let i = 0; i < size ; i++) {
+        this._cell.graph.addCells([this.cell[0]['cells'][i]])
+      };  
+  });
+}
 
 }
