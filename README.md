@@ -6,7 +6,7 @@ This project serves as a first step to create a flowbuilder to create chatbots. 
 
 ## Screenshot of the project
 
-![App Screenshot](./src/assets/front.jpg)
+![App Screenshot](src/assets/front.JPG)
 
 ## Status
 
