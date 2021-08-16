@@ -24,7 +24,7 @@ export class CellsService {
     size: number = 0;
     outputCx = {};
     outPorts = ['out1'];
-    question = 'Pregunta';
+    question = 'Question?';
     element:any = {};
     info:any[] = [];
     pages:ModelResponse[] = [];
@@ -168,7 +168,7 @@ export class CellsService {
         let mess = new joint.shapes.devs.Model({
         position: { x: 10, y: 180 },
         size: { width: 200, height: 70 },
-        attrs: { rect: { fill: '#33ECFF' }, text: { text:`Mensaje`, fill: 'black' } },
+        attrs: { rect: { fill: '#33ECFF' }, text: { text:`Messages`, fill: 'black' } },
         inPorts: ['in'],
         outPorts: [],
         ports: {

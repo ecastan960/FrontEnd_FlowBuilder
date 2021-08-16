@@ -1,14 +1,38 @@
-# JointjsV1
+# FrontEnd_Flowbuilder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+## Overview
+
+This project serves as a first step to create a flowbuilder to create chatbots. The reason for this it's to make easier the creation of the logic of the chatbot without having to deal directly with google's dialogflow/
+
+## Screenshot of the project
+
+![App Screenshot](./src/assets/front.jpg)
+
+## Status
+
+Unfinished. The are issues with saving states and the inputs and outputs using the jointjs library..
+
+## Key topics
+
+The following topics are covered in the
+creation of the project:
+
+- Angular
+  - File Structure
+  - Services, components
+  - GET and POST requests
+- Typescript
+  - Logic
+  - Interfaces
+- Bootstrap
+  - Form styling
+  - Bottons
+- JointJS
+  - Flow creation.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
